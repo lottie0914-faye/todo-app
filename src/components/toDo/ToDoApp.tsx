@@ -1,3 +1,4 @@
+import React from "react";
 import { ToDoAppProvider } from "./ToDoAppProvider";
 import { TodoInput } from "./TodoInput";
 import { TodoList } from "./TodoList";
@@ -10,5 +11,5 @@ export const ToDoApp = () => {
                 <TodoList />
             </ToDoAppProvider>
         </>
-    )
-}
+    );
+};

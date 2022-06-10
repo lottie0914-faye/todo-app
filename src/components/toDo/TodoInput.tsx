@@ -1,7 +1,8 @@
+import React from "react";
 import { useRef, useContext } from "react";
 import { ToDoAppContext } from "./ToDoAppProvider";
-import { Task } from '../../types/Task';
-import { Box, Button, TextField } from '@mui/material';
+import { Task } from "../../types/Task";
+import { Box, Button, TextField } from "@mui/material";
 
 export const TodoInput = () => {
     const { tasks, setTasks } = useContext(ToDoAppContext);
@@ -16,7 +17,7 @@ export const TodoInput = () => {
         setTasks([...tasks, task]);
         console.log(taskInputElement.current.value);
         taskInputElement.current.value = "";
-        console.log('addTask');
+        console.log("addTask");
     };
     const addMemo = () => {
         const memo: Task = {
@@ -25,8 +26,8 @@ export const TodoInput = () => {
         };
         setTasks([...tasks, memo]);
         taskInputElement.current.value = "";
-        console.log('addMemo');
-    }
+        console.log("addMemo");
+    };
     return (
         <>
             <Box
