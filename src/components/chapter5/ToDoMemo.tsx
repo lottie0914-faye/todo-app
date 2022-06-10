@@ -4,7 +4,7 @@ import {
 } from '@mui/lab';
 import { Task } from '../../types/Task';
 
-export const ToDoMemo: JSX.IntrinsicAttributes(props: Task): JSX.Element => {
+export const ToDoMemo = (props: Task): JSX.Element => {
   const { title, removeToDo, timeStamp } = props;
   return (
     <TimelineItem>
