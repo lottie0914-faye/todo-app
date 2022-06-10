@@ -30,19 +30,8 @@ export const TodoInput = () => {
     };
     return (
         <>
-            <Box
-            // sx={{
-            //     width: 600,
-            //     height: 300,
-            //     backgroundColor: 'primary.dark',
-            //     '&:hover': {
-            //         backgroundColor: 'primary.main',
-            //         opacity: [0.9, 0.8, 0.7],
-            //     },
-            // }}
-            >
-
-                <TextField id="outlined-multiline-flexible" label="入力欄" multiline required maxRows={4} variant="outlined" inputRef={taskInputElement} />
+            <Box sx={{ display: "flex", gap: 2}} >
+                <TextField id="outlined-flexible" label="入力欄" required variant="outlined" inputRef={taskInputElement} />
                 <Button variant="contained" onClick={addTask}>Add task</Button>
                 <Button variant="outlined" onClick={addMemo}>Add memo</Button>
             </Box>
