@@ -14,9 +14,9 @@ export const ToDoMemo = (props: Task): JSX.Element => {
                 <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
+                <Button variant="text" onClick={removeToDo}>x</Button>
                 <p>{timeStamp}</p>
                 <p>{ title }</p>
-                <Button variant="text" onClick={removeToDo}>x</Button>
             </TimelineContent>
         </TimelineItem>
     );

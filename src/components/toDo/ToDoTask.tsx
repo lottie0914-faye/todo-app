@@ -15,11 +15,12 @@ export const ToDoTask = (props: Task) => {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
+                    <Button variant="text" onClick={removeToDo} >x</Button>
                     <p>{timeStamp}</p>
                     <FormGroup>
                         <FormControlLabel control={<Checkbox defaultChecked={isDone} />} label={title} />
+                        
                     </FormGroup>
-                    <Button variant="text" onClick={removeToDo} >x</Button>
                 </TimelineContent>
             </TimelineItem>
         </>

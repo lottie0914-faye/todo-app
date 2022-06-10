@@ -13,7 +13,6 @@ export const MainContents = () => {
             <Routes>
                 <Route path="/" element={<ToDoApp />} />
             </Routes>
-            
         </main>
     );
 };
