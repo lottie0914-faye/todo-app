@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
-import { Task } from '../../types/Task';
+import React, { createContext, useState, useEffect } from "react";
+import { Task } from "../../types/Task";
 
 export const ToDoAppContext = createContext<
 {
@@ -11,16 +11,16 @@ export const ToDoAppProvider = (props) => {
     const { children } = props;
     const [tasks, setTasks] = useState<Array<Task>>([]);
     useEffect(() => {
-        if(sessionStorage.getItem('tasks') !== 'null') {
-            setTasks(JSON.parse(sessionStorage.getItem('tasks')));
+        if(sessionStorage.getItem("tasks") !== "null") {
+            setTasks(JSON.parse(sessionStorage.getItem("tasks")));
         }
     }, []);
     useEffect(() => {
-        sessionStorage.setItem('tasks', JSON.stringify(tasks));
-    }, )
+        sessionStorage.setItem("tasks", JSON.stringify(tasks));
+    }, );
     return (
         <ToDoAppContext.Provider value={{ tasks, setTasks }} >
             { children }
         </ToDoAppContext.Provider>
-    )
-}
+    );
+};

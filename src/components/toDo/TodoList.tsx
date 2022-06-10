@@ -1,8 +1,8 @@
-import { useContext } from 'react';
-import { ToDoAppContext } from './ToDoAppProvider';
-import { ToDoTask } from './ToDoTask';
-import { ToDoMemo } from './ToDoMemo';
-import { Timeline } from '@mui/lab';
+import React, { useContext } from "react";
+import { ToDoAppContext } from "./ToDoAppProvider";
+import { ToDoTask } from "./ToDoTask";
+import { ToDoMemo } from "./ToDoMemo";
+import { Timeline } from "@mui/lab";
 
 
 export const TodoList = () => {
@@ -30,5 +30,5 @@ export const TodoList = () => {
                 { toDos }
             </Timeline>
         </>
-    )
-}
+    );
+};

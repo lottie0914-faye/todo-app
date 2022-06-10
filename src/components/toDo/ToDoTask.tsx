@@ -1,6 +1,7 @@
-import { Task } from '../../types/Task';
-import { Button, Checkbox, FormGroup, FormControlLabel } from '@mui/material';
-import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab';
+import React from "react";
+import { Task } from "../../types/Task";
+import { Button, Checkbox, FormGroup, FormControlLabel } from "@mui/material";
+import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from "@mui/lab";
 
 
 export const ToDoTask = (props: Task) => {
@@ -21,16 +22,6 @@ export const ToDoTask = (props: Task) => {
                     <Button variant="text" onClick={removeToDo} >x</Button>
                 </TimelineContent>
             </TimelineItem>
-
-            {/* <style jsx={true}>{`
-                .isDone {
-                    margin-right: 10px;
-                }
-                .isDone:checked + .taskTitle {
-                    text-decoration: line-through;
-                    color: lightgray;
-                }
-            `}</style> */}
         </>
     );
 };

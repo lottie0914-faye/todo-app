@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/jsx-indent": ["error", 4],                         // ネストの見やすさを考慮し4で統一する
+        "react/jsx-indent-props": ["error", 4],                   // react/jsx-indentにあわせて4で統一する
+        "indent": ["error", 4],                                   // react/jsx-indentにあわせて4で統一する
+        "linebreak-style": ["error", "unix"],                     // 基本的にはMacでの開発になるため、誤ってWindowsの改行コードが混入しないようunixに統一する
+        "no-unused-vars": [2, { "vars": "all", "args": "none" }],     // 不要な変数は使用しない
+        "react/jsx-uses-vars": 2,                                 // JSXで利用される不要な変数を使用しない
+        "react/prop-types": [0],                                  // TypeScriptで記述するため、prop-typesは利用しない
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
