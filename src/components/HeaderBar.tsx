@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { AppBar, Box, Toolbar, Typography, Button, IconButton } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography, IconButton } from "@mui/material";
 import { AddReaction } from "@mui/icons-material";
 
 
@@ -21,7 +20,6 @@ export const HeaderBar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         To-do Application
                     </Typography>
-                    <Button color="inherit"><Link to="/" >Top</Link></Button>
                 </Toolbar>
             </AppBar>
         </Box>

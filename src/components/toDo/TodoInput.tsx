@@ -10,22 +10,27 @@ export const TodoInput = () => {
     const currentDate = new Date().toUTCString() ;
     const addTask = () => {
         const task: Task = {
-            title: taskInputElement.current.value,
+            // eslint-disable-next-line
+            title: taskInputElement.current!.value,
             timeStamp: currentDate,
             isDone: false,
         };
         setTasks([...tasks, task]);
-        console.log(taskInputElement.current.value);
-        taskInputElement.current.value = "";
+        // eslint-disable-next-line
+        console.log(taskInputElement.current!.value);
+        // eslint-disable-next-line
+        taskInputElement.current!.value = "";
         console.log("addTask");
     };
     const addMemo = () => {
         const memo: Task = {
-            title: taskInputElement.current.value,
+            // eslint-disable-next-line
+            title: taskInputElement.current!.value,
             timeStamp: currentDate,
         };
         setTasks([...tasks, memo]);
-        taskInputElement.current.value = "";
+        // eslint-disable-next-line
+        taskInputElement.current!.value = "";
         console.log("addMemo");
     };
     return (
